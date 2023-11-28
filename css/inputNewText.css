@@ -1,0 +1,49 @@
+/* #inputNewText {
+    min-height: 10em;
+    resize: vertical;
+    overflow: auto;
+    width: 100%;
+  } */
+
+  #inputNewText {
+    position: absolute;
+    top: 100px;
+    bottom: 50px;
+    display: block;
+  left: 1px;
+  right: 1px;
+    /* overflow: hidden; */
+    resize: both;
+    /* height: 95vh; */
+    /* min-height: 20vh;
+    max-height: 100vh - 110px; */
+    line-height: 20px;
+    border: 1px solid #ccc;
+    
+  }
+  #inputNewTitle {
+    position: absolute;
+    top: 10px;
+width: 70vw;
+min-width: 70vh;
+  }
+
+  /* #inputNewText[contenteditable]:empty::before {
+    content: "Placeholder still possible";
+    color: rgb(37, 33, 33);
+  } */
+
+  #addNewTextButton {
+    position: absolute;
+  top: 10px;
+left: 71vw;
+    margin-left: 15px
+  }
+
+  #closeAddNewTextWindow {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    /* right: 10px; */
+    margin-left: 55px
+  }

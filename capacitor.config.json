@@ -1,0 +1,8 @@
+{
+  "appId": "io.github.janveb",
+  "appName": "memorise",
+  "webDir": "dist",
+  "server": {
+    "androidScheme": "https"
+  }
+}

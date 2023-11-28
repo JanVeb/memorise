@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+  </head>
+  <body>
+    <div id="app"></div>
+    <pre class="text" id="textToHide"></pre>
+    <button id="nextButton">Next</button>
+
+    <script type="module" src="/main.js"></script>
+    <link rel="stylesheet" type="text/css" href="/css/inputNewText.css" />
+    <script type="text/javascript">
+      function greetFromHtml() {
+        alert("Hello");
+      }
+      let listMenuObj = {};
+    </script>
+    <script type="module" src="src/comp/localforage.js"></script>
+    <script type="module">
+      import {
+        openNav,
+        closeNav,
+        addNewText,
+        saveNewTextClose,
+      } from "/src/view/listMenu.js";
+      listMenuObj.openNav = openNav;
+      listMenuObj.closeNav = closeNav;
+      listMenuObj.addNewText = addNewText;
+      listMenuObj.saveNewTextClose = saveNewTextClose;
+    </script>
+
+    <div id="mySidenav" class="sidenav">
+      <a
+        id="closeListMenu"
+        href="javascript:void(0)"
+        class="closebtn"
+        onclick="listMenuObj.closeNav()"
+        >&times;</a
+      >
+      <button id="addNewText" onclick="listMenuObj.addNewText()">+</button>
+
+      <div id="addNewTextWindow">
+        <textarea id="inputNewTitle" placeholder="Enter Title"></textarea>
+        <textarea
+          type="text"
+          id="inputNewText"
+          autofocus
+          placeholder="Enter text"
+        ></textarea>
+        <button id="addNewTextButton" onclick="listMenuObj.saveNewTextClose()">
+          +
+        </button>
+        <button
+          id="closeAddNewTextWindow"
+          onclick="listMenuObj.closeAddNewTextWindow()"
+        >
+          X
+        </button>
+      </div>
+      <input type="text" id="searchInput" placeholder="Search..." />
+      <ul id="listMenu"></ul>
+      <script type="module" src="src/comp/listMenuItems.js"></script>
+    </div>
+    <button
+      id="listMenuOpen"
+      style="font-size: 30px; cursor: pointer"
+      onclick="listMenuObj.openNav()"
+    >
+      &#9776;
+    </button>
+  </body>
+</html>
